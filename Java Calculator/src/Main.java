@@ -1,42 +1,62 @@
 void main() {
     Scanner userInput = new Scanner(System.in);
-    boolean flag = false;
+    boolean flag = true;
+    double value1 = 0;
+    double value2 = 0;
+    int optionValue = 0;
 
-    while(!flag){
+
+        operationsMenu();
+
         try{
-            operationsMenu();
 
             System.out.print("\nSelect the operation: ");
-            int optionValue = userInput.nextInt();
-
-            System.out.print("\n\nInsert value 1: ");
-            double value1 = userInput.nextDouble();
-
-            System.out.print("Insert value 2: ");
-            double value2 = userInput.nextDouble();
+            optionValue = userInput.nextInt();
 
             switch (optionValue){
                 case 1:
+                    System.out.print("\n\nInsert value 1: ");
+                    value1 = userInput.nextDouble();
+
+                    System.out.print("Insert value 2: ");
+                    value2 = userInput.nextDouble();
                     sum(value1, value2);
                     break;
                 case 2:
+                    System.out.print("\n\nInsert value 1: ");
+                    value1 = userInput.nextDouble();
+
+                    System.out.print("Insert value 2: ");
+                    value2 = userInput.nextDouble();
                     subtract(value1, value2);
                     break;
                 case 3:
+                    System.out.print("\n\nInsert value 1: ");
+                    value1 = userInput.nextDouble();
+
+                    System.out.print("Insert value 2: ");
+                    value2 = userInput.nextDouble();
                     multiplication(value1, value2);
                     break;
                 case 4:
+                    System.out.print("\n\nInsert value 1: ");
+                    value1 = userInput.nextDouble();
+
+                    System.out.print("Insert value 2: ");
+                    value2 = userInput.nextDouble();
                     division(value1, value2);
                     break;
                 default:
                     System.out.print("Bye!");
-                    flag = true;
                     break;
+                }
+            } catch (InputMismatchException e){
+                System.out.println("Invalid Input");
             }
-        } catch (InputMismatchException | NumberFormatException e){
-            System.out.println("Invalid Input");
-        }
-    }
+        
+
+
+
 
 
 
